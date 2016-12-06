@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
+  <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+  <title></title>
+</head>
+<body class="body" ng-app="studentlist" ng-controller="MainCtrl">
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1 class="text-center">ClassMatch</h1>
+
+
+      <div ng-repeat="student in students">
+        <div class="student">
+
+          <div class="thumbnail">
+            <img ng-src="{{student.picture}}">
+            <li>{{student.name}}</li>
+            <li>{{student.email}}</li>
+            <li>{{student.phone}}</li>
+            <li style="color:green">{{student.strength}}</li>
+            <li style="color:red">{{student.weakness}}</li>
+          </div>
+
+          <i ng-click="removestudent($index)" class="fa fa-times remove"></i>
+        </div>
+      </div>
+
+      <form ng-submit="addstudent()">
+        <h2>Set up your profile</h2>
+</br>
+        <h3>Personal infos</h3>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Name" ng-model="name"></input>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Email" ng-model="email"></input>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Phone" ng-model="phone"></input>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Profile Picture - Add Url" ng-model="picture"></input>
+        </div>
+
+
+</br>
+<hr>
+<h3>Skills</h3>
+        
+
+<form name="myForm">
+    <select name="singleSelect" ng-model="strength">
+      <option value="HTML/CSS">HTML/CSS</option>
+      <option value="Javascript">Javascript</option>
+      <option value="AngularJs">AngularJs</option>
+      <option value="Node/Express">Node/Express</option>
+      <option value="Mongo/Mongoose">Mongo/Mongoose</option>
+    </select><br>
+
+<br>
+
+<form name="myForm">
+    <select name="singleSelect" ng-model="weakness">
+       <option value="HTML/CSS">HTML/CSS</option>
+      <option value="Javascript">Javascript</option>
+      <option value="AngularJs">AngularJs</option>
+      <option value="Node/Express">Node/Express</option>
+      <option value="Mongo/Mongoose">Mongo/Mongoose</option>
+    </select>
+
+    <br>
+     <br>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+<br>
+ <br>
+
+
+
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
