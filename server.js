@@ -16,16 +16,18 @@ app.use(express.static('public'));
 app.use('/node_modules', express.static('node_modules'));
 
 
+//post new student
 app.post('/students', function (req, res) {
   var student = new Student(req.body);
 
   student.save(function (err, student) {
     res.send(student);
-    console.log(student)
+    console.log(student);
   });
 });
 
 
+//get student
 app.get('/students',function (req,res) {
   Student.find({},function (error,students) {
     res.send(students);

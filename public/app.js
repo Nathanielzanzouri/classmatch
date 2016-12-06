@@ -6,7 +6,7 @@ app.controller('MainCtrl', function ($scope,$http) {
    $http.get('/students').success(function(data){
     console.log(data);
     $scope.students = data;
-  })
+  });
 
   $scope.addstudent = function (e) {
     if ($scope.name === '') { return; }
@@ -39,7 +39,7 @@ app.controller('MainCtrl', function ($scope,$http) {
       $scope.search = data;
     });
     //
-  }
+  };
 
 
   $scope.removeStudent = function (index) {
