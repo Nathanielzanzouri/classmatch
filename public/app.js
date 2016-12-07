@@ -2,11 +2,12 @@ var app = angular.module('studentlist', []);
 
 app.controller('MainCtrl', function ($scope,$http) {
   $scope.students = [];
+  $scope.searchArray = [];
 
    $http.get('/students').success(function(data){
     console.log(data);
     $scope.students = data;
-  })
+  });
 
   $scope.addstudent = function (e) {
     if ($scope.name === '') { return; }
@@ -36,12 +37,14 @@ app.controller('MainCtrl', function ($scope,$http) {
 
   $scope.searchbar = function () {
     $http.get("/Route/" + $scope.Search).success(function(data){
+      console.log(data);
+      $scope.searchArray.push(data);
       $scope.search = data;
     });
 
      
     //
-  }
+  };
 
 
   $scope.removeStudent = function (index) {

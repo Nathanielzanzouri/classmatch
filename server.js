@@ -21,7 +21,7 @@ app.post('/students', function (req, res) {
 
   student.save(function (err, student) {
     res.send(student);
-    console.log(student)
+    console.log(student);
   });
 });
 
@@ -34,7 +34,7 @@ app.get('/students',function (req,res) {
 app.get('/Route/:aStrength',function(req,res) {
 
 
-    Student.findOne({strength: req.params.aStrength},function(err, Thestudent){
+    Student.find({strength: req.params.aStrength},function(err, Thestudent){
       res.send(Thestudent);
     });
 
