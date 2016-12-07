@@ -16,5 +16,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nathanielzanzouri/classmatch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nathanielzanzouri/classmatch/issues"
+  },
+  "homepage": "https://github.com/Nathanielzanzouri/classmatch#readme",
   "description": ""
 }

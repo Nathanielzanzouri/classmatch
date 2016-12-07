@@ -31,16 +31,14 @@ app.get('/students',function (req,res) {
     res.send(students);
   });
 
-// search bar 
-
-// app.get('/dogRoute/:aName',function(req,res) {
+app.get('/Route/:aStrength',function(req,res) {
 
 
-//     Student.findOne({name: req.params.aName},function(err, Thestudent){
-//       res.send(Thestudent);
-//     });
+    Student.findOne({strength: req.params.aStrength},function(err, Thestudent){
+      res.send(Thestudent);
+    });
 
-// });
+});
 
 });
 

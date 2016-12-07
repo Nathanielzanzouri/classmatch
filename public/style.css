@@ -1,4 +1,37 @@
 .body {
-  background-color: #ffcc99;
+background-image: url("http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
+color: white;
 }
 
+.formulaire {
+margin-left: 20%;
+margin-right: 20%;
+}
+
+.thumbnail {
+ width: 400px;
+ margin-left: 20%;
+ background-color: #FFFF99 !important;
+ align-content: center;
+}
+
+
+li {
+  text-align: center;
+}
+.imageelevation {
+ text-align: center;
+}
+
+.searchgenerator {
+text-align: center;
+
+}
+
+.searchgeneratorinput {
+  color: black;
+}
+
+h1 {
+  color:blue;
+}

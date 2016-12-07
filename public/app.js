@@ -35,9 +35,11 @@ app.controller('MainCtrl', function ($scope,$http) {
 };
 
   $scope.searchbar = function () {
-    $http.get("/dogRoute/" + $scope.Search).success(function(data){
+    $http.get("/Route/" + $scope.Search).success(function(data){
       $scope.search = data;
     });
+
+     
     //
   }
 
