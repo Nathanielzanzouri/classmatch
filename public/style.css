@@ -2,6 +2,12 @@
 background-image: url("http://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
 color: white;
 }
+
+.formulaire {
+margin-left: 20%;
+margin-right: 20%;
+}
+
 .thumbnail {
  width: 400px;
  margin-left: 20%;
@@ -13,13 +19,19 @@ color: white;
 li {
   text-align: center;
 }
-.match {
+.imageelevation {
+ text-align: center;
 }
 
 .searchgenerator {
 text-align: center;
+
 }
 
 .searchgeneratorinput {
   color: black;
+}
+
+h1 {
+  color:blue;
 }

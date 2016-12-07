@@ -11,7 +11,8 @@
 
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <h1 class="text-center">ClassMatch</h1>
+      <h1 class="text-center" style=" color: #d54d7b; font-family:Great Vibes, cursive; color:white; font-size: 100px; line-height: 160px; font-weight: normal; margin-bottom: 0px; margin-top: 40px; text-align: center; text-shadow: 0 1px 1px #fff;">ClassMatch</h1>
+      <div class="imageelevation"><img src="https://a248.e.akamai.net/secure.meetupstatic.com/photos/member/6/3/c/4/highres_241585540.jpeg"></div>
 
 <!-- 
       <div ng-repeat="student in students">
@@ -30,7 +31,7 @@
         </div>
       </div>
 
-      <form ng-submit="addstudent()">
+      <form class="formulaire"ng-submit="addstudent()">
         <h2>Set up your profile</h2>
 </br>
         <h3>Personal infos</h3>
@@ -58,7 +59,7 @@
         
 
 <form name="myForm">
-    <select name="singleSelect" ng-model="strength">
+    <select style="color:black"name="singleSelect" ng-model="strength">
       <option value="HTMLCSS">HTMLCSS</option>
       <option value="Javascript">Javascript</option>
       <option value="AngularJs">AngularJs</option>
@@ -69,7 +70,7 @@
 <br>
 
 <form name="myForm">
-    <select name="singleSelect" ng-model="weakness">
+    <select style="color:black" name="singleSelect" ng-model="weakness">
        <option value="HTMLCSS">HTMLCSS</option>
       <option value="Javascript">Javascript</option>
       <option value="AngularJs">AngularJs</option>
@@ -80,7 +81,7 @@
     <br>
      <br>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" style="background-color:orange" class="btn btn-primary">Submit</button>
       </form>
     </div>
   </div>
@@ -93,9 +94,11 @@
 
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <h1 class="text-center">Matches generator</h1>
-<h2 class="text-center">Search</h2>
-
+      <h1 class="text-center">Match generator</h1>
+<h2 class="text-center" style="text-decoration: underline"><i>Select the skill you want to improve</i></h2>
+<br>
+<div style="text-align: center">
+<img src="http://www.beyondkey.com/images/technology-logos/mean.png"></div>
         <form class="searchgenerator" name="myForm">
     <select class="searchgeneratorinput" name="singleSelect" ng-model="Search">
       <option value="HTMLCSS">HTMLCSS</option>
@@ -106,18 +109,20 @@
     </select><br>
 
 
-        <button ng-click="searchbar()" type="submit" class="btn btn-primary">Enter your weakness</button>
+        <button ng-click="searchbar()" type="submit" class="btn btn-primary">Select</button>
 <br>
 <br>
 <br>
         <div class="match">
              <img ng-src="{{search.picture}}">
             <p>{{search.name}}</p>
-            <p style="color:green">{{search.strength}}</p>
-            <p style="color:red">{{search.weakness}}</p>
-            <p>{{search.email}}</p>
-            <p>{{search.phone}}</p>
-        </div>
+            <p style="background:green;margin-left: 30%;margin-right: 30%;"
+}">{{search.strength}}</p>
+            <p style="background:red;margin-left: 30%;margin-right: 30%;">{{search.weakness}}</p>
+            <a href="{{search.email}}" style="background:blue;color:white;margin-left: 30%;margin-right: 30%;">{{search.email}}</a>
+            <br>
+            <a href="{{search.phone}}" style="background:yellow;color:orange;margin-left: 30%;margin-right: 30%;">{{search.phone}}</a> 
+            </div>
    
         </div>
         </div>

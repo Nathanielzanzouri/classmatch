@@ -38,6 +38,8 @@ app.controller('MainCtrl', function ($scope,$http) {
     $http.get("/Route/" + $scope.Search).success(function(data){
       $scope.search = data;
     });
+
+     
     //
   }
 
