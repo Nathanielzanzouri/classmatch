@@ -13,7 +13,7 @@
     <div class="col-md-6 col-md-offset-3">
       <h1 class="text-center">ClassMatch</h1>
 
-
+<!-- 
       <div ng-repeat="student in students">
         <div class="student">
 
@@ -25,8 +25,8 @@
             <li style="color:green">{{student.strength}}</li>
             <li style="color:red">{{student.weakness}}</li>
           </div>
-
-          <i ng-click="removestudent($index)" class="fa fa-times remove"></i>
+ -->
+<!--           <i ng-click="removestudent($index)" class="fa fa-times remove"></i> -->
         </div>
       </div>
 
@@ -59,22 +59,22 @@
 
 <form name="myForm">
     <select name="singleSelect" ng-model="strength">
-      <option value="HTML/CSS">HTML/CSS</option>
+      <option value="HTMLCSS">HTMLCSS</option>
       <option value="Javascript">Javascript</option>
       <option value="AngularJs">AngularJs</option>
-      <option value="Node/Express">Node/Express</option>
-      <option value="Mongo/Mongoose">Mongo/Mongoose</option>
+      <option value="NodeExpress">NodeExpress</option>
+      <option value="MongoMongoose">MongoMongoose</option>
     </select><br>
 
 <br>
 
 <form name="myForm">
     <select name="singleSelect" ng-model="weakness">
-       <option value="HTML/CSS">HTML/CSS</option>
+       <option value="HTMLCSS">HTMLCSS</option>
       <option value="Javascript">Javascript</option>
       <option value="AngularJs">AngularJs</option>
-      <option value="Node/Express">Node/Express</option>
-      <option value="Mongo/Mongoose">Mongo/Mongoose</option>
+      <option value="NodeExpress">NodeExpress</option>
+      <option value="MongoMongoose">MongoMongoose</option>
     </select>
 
     <br>
@@ -86,6 +86,60 @@
   </div>
 <br>
  <br>
+
+<hr>
+
+<!-- search bar  -->
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1 class="text-center">Matches generator</h1>
+<h2 class="text-center">Search</h2>
+
+        <form class="searchgenerator" name="myForm">
+    <select class="searchgeneratorinput" name="singleSelect" ng-model="Search">
+      <option value="HTMLCSS">HTMLCSS</option>
+      <option value="Javascript">Javascript</option>
+      <option value="AngularJs">AngularJs</option>
+      <option value="NodeExpress">NodeExpress</option>
+      <option value="MongoMongoose">MongoMongoose</option>
+    </select><br>
+
+
+        <button ng-click="searchbar()" type="submit" class="btn btn-primary">Enter your weakness</button>
+<br>
+<br>
+<br>
+        <div class="match">
+             <img ng-src="{{search.picture}}">
+            <p>{{search.name}}</p>
+            <p style="color:green">{{search.strength}}</p>
+            <p style="color:red">{{search.weakness}}</p>
+            <p>{{search.email}}</p>
+            <p>{{search.phone}}</p>
+        </div>
+   
+        </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
 
 
