@@ -37,6 +37,18 @@ app.get('/Route/:aStrength',function(req,res) {
 
 
     Student.find({strength: req.params.aStrength},function(err, Thestudent){
+<<<<<<< HEAD
+=======
+      res.send(Thestudent);
+    });
+
+    });
+
+app.get('/Route2/:aWeakness',function(req,res) {
+
+
+    Student.find({weakness: req.params.aWeakness},function(err, Thestudent){
+>>>>>>> 831a83168d09a257ac72b7a1c39bc10fd25acdbb
       res.send(Thestudent);
     });
 

@@ -43,9 +43,24 @@ app.controller('MainCtrl', function ($scope,$http) {
     $scope.searchArray = [];
     $http.get("/Route/" + $scope.Search).success(function(data){
       console.log(data);
+<<<<<<< HEAD
       $scope.searchArray = data; //instead of push, so that the arrays don't become nested
       console.log($scope.searchArray);
+=======
+      $scope.searchArray = data;
+      console.log($scope.searchArray);
+
     });
+
+}
+    $scope.searchbar2 = function () {
+      $scope.searchArray2 = [];
+    $http.get("/Route2/" + $scope.Search2).success(function(data){
+      $scope.searchArray2 = data;
+      console.log($scope.searchArray2);
+>>>>>>> 831a83168d09a257ac72b7a1c39bc10fd25acdbb
+    });
+
 
      
     //
