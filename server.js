@@ -34,7 +34,16 @@ app.get('/students',function (req,res) {
 app.get('/Route/:aStrength',function(req,res) {
 
 
-    Student.findOne({strength: req.params.aStrength},function(err, Thestudent){
+    Student.find({strength: req.params.aStrength},function(err, Thestudent){
+      res.send(Thestudent);
+    });
+
+    });
+
+app.get('/Route2/:aWeakness',function(req,res) {
+
+
+    Student.find({weakness: req.params.aWeakness},function(err, Thestudent){
       res.send(Thestudent);
     });
 

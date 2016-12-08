@@ -23,6 +23,10 @@ li {
  text-align: center;
 }
 
+.imagegoogle {
+  margin-left: 50px;
+}
+
 .searchgenerator {
 text-align: center;
 
@@ -34,4 +38,7 @@ text-align: center;
 
 h1 {
   color:blue;
+}
+.image {
+  display: inline-block;
 }

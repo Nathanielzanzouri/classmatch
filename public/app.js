@@ -35,9 +35,22 @@ app.controller('MainCtrl', function ($scope,$http) {
 };
 
   $scope.searchbar = function () {
+    $scope.searchArray = [];
     $http.get("/Route/" + $scope.Search).success(function(data){
-      $scope.search = data;
+      console.log(data);
+      $scope.searchArray = data;
+      console.log($scope.searchArray);
+
     });
+
+}
+    $scope.searchbar2 = function () {
+      $scope.searchArray2 = [];
+    $http.get("/Route2/" + $scope.Search2).success(function(data){
+      $scope.searchArray2 = data;
+      console.log($scope.searchArray2);
+    });
+
 
      
     //
