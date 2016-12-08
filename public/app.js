@@ -1,8 +1,12 @@
-var app = angular.module('studentlist', []);
+var app = angular.module("studentlist", []);
 
 app.controller('MainCtrl', function ($scope,$http) {
   $scope.students = [];
-  $scope.searchArray = [];
+  
+  /*var fileX = { "pupils": [] };
+  $scope.searchArray = fileX.pupils;*/
+  // $scope.searchArray = [];
+ 
 
    $http.get('/students').success(function(data){
     console.log(data);
@@ -36,10 +40,11 @@ app.controller('MainCtrl', function ($scope,$http) {
 };
 
   $scope.searchbar = function () {
+    $scope.searchArray = [];
     $http.get("/Route/" + $scope.Search).success(function(data){
       console.log(data);
-      $scope.searchArray.push(data);
-      $scope.search = data;
+      $scope.searchArray = data; //instead of push, so that the arrays don't become nested
+      console.log($scope.searchArray);
     });
 
      
