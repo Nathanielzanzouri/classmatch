@@ -9,7 +9,7 @@
 </head>
 <body class="body" ng-app="studentlist" ng-controller="MainCtrl">
 
-  <div class="row">p
+  <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <div style="text-align: center"><img src="https://lh3.ggpht.com/vrKC4cLAuEFf2-FdDfc02iuCHa5TnPRd-uecZZY8vCzxFnCN-C0PGZ-qsTKeKSIVacA=w300"> <h1 class="text-center" style=" color: #d54d7b; font-family:Great Vibes, cursive; color:white; text-decoration: underline; font-size: 70px; line-height: 160px; font-weight: normal; margin-bottom: 0px; margin-top: 40px; text-align: center; text-shadow: 0 1px 1px #fff;">ClassMatch</h1> </div>
       
@@ -118,7 +118,8 @@
 <br>
         <div class="match" ng-repeat="search in searchArray">
              <div class="row">
-             <a href="mailto:{{search.email}}"><img ng-src="{{search.picture}}" class="image"></a>
+             <a href="mailto:{{search.email}}"><img ng-src="{{search.picture}}" class="image" style="height: 200px;
+    width: 200;"></a>
             <p style="font-size: 60px;">{{search.name}}</p>
             <p style="font-size: 25px;background:green;margin-left: 30%;margin-right: 30%;"
 }">{{search.strength}}</p>
@@ -151,7 +152,8 @@
 <br>
 <br>
         <div class="match2" ng-repeat="search2 in searchArray2">
-             <a href="mailto:{{search2.email}}"><img ng-src="{{search2.picture}}"></a>
+             <a href="mailto:{{search2.email}}"><img ng-src="{{search2.picture}}" style="height: 200px;
+    width: 200;"></a>
             <p style="font-size: 60px;">{{search2.name}}</p>
             <p style="font-size: 25px;background:green;margin-left: 30%;margin-right: 30%;"
 }">{{search2.strength}}</p>

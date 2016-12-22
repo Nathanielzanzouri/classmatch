@@ -1,4 +1,4 @@
- .var app = angular.module('studentlist', []);
+var app = angular.module('studentlist', []);
 
 app.controller('MainCtrl', function ($scope,$http) {
   $scope.students = [];
