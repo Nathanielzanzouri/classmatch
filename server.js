@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/students');
+mongoose.connect(process.env.MONGOLAB_CHARCOAL_URI ||'mongodb://localhost/rereddit-final');
 
 var Student = require("./StudentModel");
 
@@ -52,4 +52,4 @@ app.get('/Route2/:aWeakness',function(req,res) {
 });
 
 
-app.listen(8000);
+app.listen(process.env.PORT || '4000');
