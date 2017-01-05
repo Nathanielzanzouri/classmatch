@@ -1,5 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+var FacebookStrategy = require('passport-facebook').Strategy;
+var expressSession = require('express-session');
 
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGOLAB_CHARCOAL_URI ||'mongodb://localhost/rereddit-final');
@@ -10,6 +13,10 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(expressSession({secret: '3f0efe0fcde86a504c3f0203813fcc9a'}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(express.static('public'));
 
